@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import {
   DASHBOARD_SIDEBAR_NAV_TOP as nav,
   DASHBOARD_SIDEBAR_NAV_BOTTOM as bottom_nav,
-} from "../lib/navigation";
+} from "../../lib/navigation";
 import { HiOutlineCurrencyPound } from "react-icons/hi";
 
 const Sidebar = () => {

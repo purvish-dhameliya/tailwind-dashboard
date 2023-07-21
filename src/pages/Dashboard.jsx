@@ -1,9 +1,9 @@
 import React from "react";
-import DashboardGridState from "./DashboardGridState";
-import Transaction from "./Transaction";
-import Orders from "./Orders";
-import Products from "./Products";
-import BuyerProfilePieChart from "./BuyerProfilePieChart";
+import DashboardGridState from "../components/DashboardGridState";
+import Transaction from "../components/Transaction";
+import Orders from "../components/Orders";
+import Products from "../components/Products";
+import BuyerProfilePieChart from '../components/BuyerProfilePieChart'
 
 const Dashboard = () => {
   return (

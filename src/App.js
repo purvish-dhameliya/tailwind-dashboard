@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Layout from "./components/shared/Layout";
-import Dashboard from "./components/Dashboard";
+
 import Products from "./components/Products";
 import '../src/App.css'
 import Customers from './components/Customers';
@@ -11,6 +10,8 @@ import Message from "./components/Message";
 import NotFound from "./components/NotFound";
 import Support from "./components/Support";
 import Setting from "./components/Setting";
+import Dashboard from "./pages/Dashboard";
+import Layout from "./components/layout/Layout";
 
 const App = () => {
   return (
