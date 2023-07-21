@@ -1,38 +1,174 @@
-.App {
-  text-align: center;
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+/* DASHBOARD GRID */
+.custom {
+  grid-template-areas: "box1 box2 box3 box4";
+}
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* for dashboard grid states */
+@media screen and (max-width: 1024px) {
+  .custom {
+    grid-template-areas:
+      "box1 box2 box3"
+      "box4 .    .   ";
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 800px) {
+  .custom {
+    grid-template-areas:
+      "box1 box2"
+      "box3 box4";
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 550px) {
+  .custom {
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4";
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .box1,
+  .box2,
+  .box3,
+  .box4 {
+    width: 10rem;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+  }
+
+  .custom {
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3"
+      "box4";
+  }
+}
+
+/* pichart and transaction  */
+.pichartcss {
+  grid-template-areas: "pibox1 pibox2";
+}
+.pibox1 {
+  grid-area: pibox1;
+}
+.pibox2 {
+  grid-area: pibox2;
+}
+
+@media screen and (max-width: 1235px) {
+  .pibox1 {
+    margin: 0 150px 0 150px;
+    transition: all;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas:
+      "pibox1 pibox1"
+      "pibox2 .";
+  }
+}
+
+@media screen and (max-width: 1048px) {
+  .pibox1 {
+    margin: 0;
+    width: 25rem;
+  }
+  .pibox2 {
+    margin: 0;
+    width: 20rem;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas: "pibox1 pibox2";
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .pibox1 {
+    margin: 10px 50px;
+    width: 25rem;
+  }
+  .pibox2 {
+    margin: 10px 50px;
+    width: 25rem;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas:
+      "pibox1 ."
+      "pibox2 .";
+  }
+}
+
+@media screen and (max-width: 723px) {
+  .pibox1 {
+    margin: 10px 0px;
+    width: 20rem;
+  }
+  .pibox2 {
+    margin: 10px 0px;
+    width: 20rem;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas:
+      "pibox1 ."
+      "pibox2 .";
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .pibox1 {
+    margin: 10px 0px;
+    width: 12rem;
+  }
+  .pibox2 {
+    margin: 10px 0px;
+    width: 12rem;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas:
+      "pibox1 ."
+      "pibox2 .";
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .pibox1 {
+    width: 10rem;
+  }
+  .pibox2 {
+    width: 10rem;
+  }
+  .pichartcss {
+    display: grid;
+    grid-template-areas:
+      "pibox1 ."
+      "pibox2 .";
   }
 }
